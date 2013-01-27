@@ -1,0 +1,38 @@
+﻿[{ 
+	"id" : 1,
+    "title": "Who will win the Best Picture in the Oscars this year?", 
+    "date": "12-01-2012",
+    "text" : "Argo..? Lincoln..?",
+    "answers" : [{
+        "text" : "Has to be Argo, Affleck out done himself",
+        "author" : "Chris"
+    },{
+        "text" : "lincoln. lincoln. lincoln. lincoln",
+        "author" : "Darren"
+    }] 
+},{ 
+	"id" : 2,
+    "title": "Storage Wars or Auction Kings?", 
+    "date": "11-01-2012",
+    "text" : "What show started first?",
+    "answers" : [{
+        "text" : "YUUUUP!",
+        "author" : "Dave"
+    },{
+        "text" : "I think it was Storage Wars",
+        "author" : "Christine"
+    }] 
+},{ 
+	"id" : 3,
+    "title": "XML or JSON?", 
+    "date": "12-01-2012",
+    "text" : "What is the best?",
+    "answers" : [{
+        "text" : "It has to be XML",
+        "author" : "Darren"
+    },{
+        "text" : "You have to be kidding me, obviously JSON!",
+        "author" : "Paul"
+    }] 
+
+}]

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rehab+</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!-- All the html needed for this, yay! -->
+<div id="content">
+    <h1>Q+A</h1>
+    <div id="questions"></div>
+    <div id="answers"></div>
+</div>
+
+<!-- get them scripts -->
+<script src="lib/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="lib/jquery.tmpl.min.js" type="text/javascript"></script>
+<script src="lib/underscore.js" type="text/javascript"></script>
+<script src="lib/backbone.js" type="text/javascript"></script>
+<script src="js/questions.js" type="text/javascript"></script>
+
+<!-- Question Template -->
+<script type="text/template" id="question-tmpl">
+    <div class="question-menu" id="question${attributes.id}">
+        {{if attributes.title != ""}}
+            <a href="#question/${attributes.id}" class="title">${ attributes.title }</a>
+        {{/if}}
+    </div>
+</script>
+
+<!-- Answers Template -->
+<script type="text/template" id="answers-tmpl">
+    <div class="content cf" id="question${attributes.id}">
+    <div class="question cf">${ attributes.text }</div> 
+    <div class="date"> ${ attributes.date }</div> 
+    <div class="answers">
+            {{each attributes.answers}}
+                <strong>${this.author}:</strong> ${this.text}<br />
+            {{/each}} 
+    </div>  
+   
+    </div>
+</script>
+</body>
+</html>
