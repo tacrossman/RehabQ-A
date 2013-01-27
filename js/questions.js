@@ -50,6 +50,7 @@
         routes: {
             "question/:id": "showQuestion"
         },
+
         //init function to pull in the json via ajax
         initialize: function (options)
         {
@@ -79,10 +80,12 @@
             view.render();
         }
     });
-    
+
     //start the app please!
     new App.Router.Router;
+
     //then make sure we can use bookmarkable URLs
     Backbone.history.start();
+    
 });
 

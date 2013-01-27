@@ -5,7 +5,6 @@
     <title>Rehab+</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
-
 </head>
 <body>
 
@@ -35,14 +34,13 @@
 <!-- Answers Template -->
 <script type="text/template" id="answers-tmpl">
     <div class="content cf" id="question${attributes.id}">
-    <div class="question cf">${ attributes.text }</div> 
-    <div class="date"> ${ attributes.date }</div> 
-    <div class="answers">
-            {{each attributes.answers}}
-                <strong>${this.author}:</strong> ${this.text}<br />
-            {{/each}} 
-    </div>  
-   
+        <div class="question cf">${ attributes.text }</div> 
+        <div class="date"> ${ attributes.date }</div> 
+        <div class="answers">
+                {{each attributes.answers}}
+                    <strong>${this.author}:</strong> ${this.text}<br />
+                {{/each}} 
+        </div>  
     </div>
 </script>
 </body>
