@@ -66,13 +66,12 @@ h1 {
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: underline;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
 }
 
 .date {
     font-size: 14px;
     font-style: italic;
+    margin-bottom: 26px;
 }
 
 .answers {
