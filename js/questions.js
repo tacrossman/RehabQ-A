@@ -18,8 +18,7 @@
         el: $('#questions'),
         template: $('#question-tmpl').template(),
 
-        render: function ()
-        {
+        render: function (){
             this.el.empty();
             $.tmpl(this.template, this.model.toArray()).appendTo(this.el);
             return this;
@@ -31,8 +30,7 @@
         el: $('#answers'),
         template: $('#answers-tmpl').template(),
 
-        render: function ()
-        {
+        render: function (){
             this.el.empty();
             $.tmpl(this.template, this.model).appendTo(this.el);
             return this;
@@ -52,16 +50,14 @@
         },
 
         //init function to pull in the json via ajax
-        initialize: function (options)
-        {
+        initialize: function (options){
             var _this = this;
             $.ajax({
                 url: "data/questions.json",
                 dataType: 'json',
                 data: {},
                 async: false,
-                success: function (data)
-                {
+                success: function (data){
                     _this._data = data;
                     _this._items = new App.Collections.Questions(data);
                     _this._view = new App.Views.QuestionView ({ model: _this._items });
@@ -72,8 +68,7 @@
         },
 
         //show info method to return the correct answers to the correct question and add/remove active classes
-        showQuestion: function (id)
-        {
+        showQuestion: function (id){
             var view = new App.Views.Answers({ model: this._items.at(id - 1) });
             $(".active").removeClass("active");
             $("#question" + id).addClass("active");
